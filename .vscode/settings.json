@@ -9,5 +9,10 @@
     ],
     "java.project.sourcePaths": [
         "src"
-    ]
+    ],
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
 }
