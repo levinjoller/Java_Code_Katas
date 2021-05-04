@@ -1,5 +1,5 @@
 /**
- * The FizzBuzz method getResult returns a number, Fizz (%3 == 0), 
+ * The FizzBuzz method getResult returns a number, Fizz (%3 == 0),
  * Buzz (%5 == * 0) or FizzBuzz ((%3 && %5) == 0).
  *
  * @author Levin Joller
