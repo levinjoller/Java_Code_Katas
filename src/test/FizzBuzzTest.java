@@ -30,7 +30,8 @@ public class FizzBuzzTest {
     @Test
     public void passMultipleOfThreeReturnFizz() {
         String expected = "Fizz";
-        String actual = FizzBuzz.getResult(3);
+        int currentMultiplier = 3;
+        String actual = FizzBuzz.getResult(currentMultiplier);
         assertEquals(expected, actual);
     }
 }

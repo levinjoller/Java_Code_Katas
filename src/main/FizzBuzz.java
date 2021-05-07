@@ -11,6 +11,8 @@ package main;
 
 public final class FizzBuzz {
 
+    private static final int MULTIPLIER_THREE = 3;
+
     private FizzBuzz() {
         throw new IllegalStateException();
     }
@@ -22,7 +24,6 @@ public final class FizzBuzz {
      * @return String; Returns a number, Fizz, Buzz or FizzBuzz.
      */
     public static String getResult(final int number) {
-        final int MULTIPLIER_THREE = 3;
         if (number % MULTIPLIER_THREE == 0) {
             return "Fizz";
         } else {
