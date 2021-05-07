@@ -23,4 +23,14 @@ public class FizzBuzzTest {
         String actual = FizzBuzz.getResult(1);
         assertEquals(expected, actual);
     }
+
+    /**
+     * Return Fizz for multiple of only three.
+     */
+    @Test
+    public void passMultipleOfThreeReturnFizz() {
+        String expected = "Fizz";
+        String actual = FizzBuzz.getResult(3);
+        assertEquals(expected, actual);
+    }
 }
