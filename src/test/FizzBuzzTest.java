@@ -46,7 +46,7 @@ public class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
-    /** Return FizzBuzz for a multiple of three and five */
+    /** Return FizzBuzz for a multiple of three and five. */
     @Test
     public void getResultPassFifteenReturnFizzBuzz() {
         final int number = 15;
