@@ -25,7 +25,7 @@ public class FizzBuzzTest {
     }
 
     /**
-     * Return Fizz for multiple of only three.
+     * Return Fizz for multiple of three.
      */
     @Test
     public void passMultipleOfThreeReturnFizz() {

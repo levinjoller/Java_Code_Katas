@@ -22,7 +22,8 @@ public final class FizzBuzz {
      * @return String; Returns a number, Fizz, Buzz or FizzBuzz.
      */
     public static String getResult(final int number) {
-        if (number % 3 == 0) {
+        final int MULTIPLIER_THREE = 3;
+        if (number % MULTIPLIER_THREE == 0) {
             return "Fizz";
         } else {
             return String.valueOf(number);
