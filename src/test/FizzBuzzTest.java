@@ -22,7 +22,7 @@ public class FizzBuzzTest {
 
     /** Return a normal number. */
     @Test
-    public void passNoMultipleOfThreeOrFiveReturnNumber() {
+    public void getResultPassOneReturnOne() {
         String expected = "1";
         String actual = FizzBuzz.getResult(1);
         assertEquals(expected, actual);
@@ -30,7 +30,7 @@ public class FizzBuzzTest {
 
     /** Return Fizz for a multiple of three. */
     @Test
-    public void passMultipleOfThreeReturnFizz() {
+    public void getResultPassThreeReturnFizz() {
         final int number = 3;
         String expected = MULTIPLE_THREE;
         String actual = FizzBuzz.getResult(number);
@@ -39,7 +39,7 @@ public class FizzBuzzTest {
 
     /** Return Buzz for a multiple of five. */
     @Test
-    public void passMultipleOfFiveReturnBuzz() {
+    public void getResultPassFiveReturnBuzz() {
         final int number = 5;
         String expected = MULTIPLE_FIVE;
         String actual = FizzBuzz.getResult(number);
@@ -48,7 +48,7 @@ public class FizzBuzzTest {
 
     /** Return FizzBuzz for a multiple of three and five */
     @Test
-    public void passMultipleOfThreeAndFiveReturnFizzBuzz() {
+    public void getResultPassFifteenReturnFizzBuzz() {
         final int number = 15;
         String expected = MULTIPLE_THREE + MULTIPLE_FIVE;
         String actual = FizzBuzz.getResult(number);
