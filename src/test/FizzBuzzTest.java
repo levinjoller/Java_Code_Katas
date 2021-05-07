@@ -31,7 +31,7 @@ public class FizzBuzzTest {
     /** Return Fizz for a multiple of three. */
     @Test
     public void passMultipleOfThreeReturnFizz() {
-        int number = 3;
+        final int number = 3;
         String expected = MULTIPLE_THREE;
         String actual = FizzBuzz.getResult(number);
         assertEquals(expected, actual);
@@ -40,7 +40,7 @@ public class FizzBuzzTest {
     /** Return Buzz for a multiple of five. */
     @Test
     public void passMultipleOfFiveReturnBuzz() {
-        int number = 5;
+        final int number = 5;
         String expected = MULTIPLE_FIVE;
         String actual = FizzBuzz.getResult(number);
         assertEquals(expected, actual);
