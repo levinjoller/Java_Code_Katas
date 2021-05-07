@@ -11,6 +11,9 @@ package main;
 
 public final class FizzBuzz {
 
+    /**
+     * Number three as a multiplier.
+     */
     private static final int MULTIPLIER_THREE = 3;
 
     private FizzBuzz() {
