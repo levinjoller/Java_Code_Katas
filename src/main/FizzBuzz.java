@@ -1,6 +1,5 @@
 /**
- * The FizzBuzz method getResult returns a number, Fizz (%3 == 0),
- * Buzz (%5 == 0) or FizzBuzz ((%3 && %5) == 0).
+ * The FizzBuzz game class
  *
  * @author Levin Joller
  * @version 1.0
@@ -30,8 +29,8 @@ public final class FizzBuzz {
     /**
      * This methods determines if a number is a multiple of three, five or both.
      *
-     * @param number number to check.
-     * @return String; Returns a number, Fizz, Buzz or FizzBuzz.
+     * @param number to be checked.
+     * @return number, "Fizz", "Buzz" or "FizzBuzz".
      */
     public static String getResult(final int number) {
         boolean isMultipleOfThree = (number % THREE == 0);

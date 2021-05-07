@@ -1,5 +1,5 @@
 /**
- * The FizzBuzzTest is the test class for FizzBuzz.java.
+ * The FizzBuzzTest class provides unit tests for the main.FizzBuzz class
  *
  * @author Levin Joller
  * @version 1.0
@@ -14,13 +14,13 @@ import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
-    /** Result for a multiple of three. */
+    /** Name for a multiple of three. */
     private static final String MULTIPLE_THREE = "Fizz";
 
-    /** Result for a multiple of five. */
+    /** Name for a multiple of five. */
     private static final String MULTIPLE_FIVE = "Buzz";
 
-    /** Return a normal number. */
+    /** Return the parameter one. */
     @Test
     public void getResultPassOneReturnOne() {
         String expected = "1";
@@ -28,7 +28,7 @@ public class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
-    /** Return Fizz for a multiple of three. */
+    /** Return "Fizz" for the number three. */
     @Test
     public void getResultPassThreeReturnFizz() {
         final int number = 3;
@@ -37,7 +37,7 @@ public class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
-    /** Return Buzz for a multiple of five. */
+    /** Return "Buzz" for the number five. */
     @Test
     public void getResultPassFiveReturnBuzz() {
         final int number = 5;
@@ -46,7 +46,7 @@ public class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
-    /** Return FizzBuzz for a multiple of three and five. */
+    /** Return "FizzBuzz" for the number fifteen. */
     @Test
     public void getResultPassFifteenReturnFizzBuzz() {
         final int number = 15;
