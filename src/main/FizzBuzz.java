@@ -14,6 +14,9 @@ public final class FizzBuzz {
     /** Number three as a multiplier. */
     private static final int MULTIPLIER_THREE = 3;
 
+    /** Number five as a multiplier. */
+    private static final int MULTIPLIER_FIVE = 5;
+
     private FizzBuzz() {
         throw new IllegalStateException();
     }
@@ -25,10 +28,15 @@ public final class FizzBuzz {
      * @return String; Returns a number, Fizz, Buzz or FizzBuzz.
      */
     public static String getResult(final int number) {
-        if (number % MULTIPLIER_THREE == 0) {
+        boolean isMultipleOfThree = (number % MULTIPLIER_THREE == 0);
+        boolean isMultipleOfFive = (number % MULTIPLIER_FIVE == 0);
+
+        if (isMultipleOfThree) {
             return "Fizz";
-        } else {
-            return String.valueOf(number);
         }
+        if (isMultipleOfFive) {
+            return "Buzz";
+        }
+        return String.valueOf(number);
     }
 }

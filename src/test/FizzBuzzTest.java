@@ -14,8 +14,11 @@ import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
-    /** Number three as a multiplier. */
-    private static final int MULTIPLIER_THREE = 3;
+    /** Result for a multiple of three. */
+    private static final String MULTIPLE_THREE = "Fizz";
+
+    /** Result for a multiple of five. */
+    private static final String MULTIPLE_FIVE = "Buzz";
 
     /** Return a normal number. */
     @Test
@@ -28,8 +31,18 @@ public class FizzBuzzTest {
     /** Return Fizz for a multiple of three. */
     @Test
     public void passMultipleOfThreeReturnFizz() {
-        String expected = "Fizz";
-        String actual = FizzBuzz.getResult(MULTIPLIER_THREE);
+        int number = 3;
+        String expected = MULTIPLE_THREE;
+        String actual = FizzBuzz.getResult(number);
+        assertEquals(expected, actual);
+    }
+
+    /** Return Buzz for a multiple of five. */
+    @Test
+    public void passMultipleOfFiveReturnBuzz() {
+        int number = 5;
+        String expected = MULTIPLE_FIVE;
+        String actual = FizzBuzz.getResult(number);
         assertEquals(expected, actual);
     }
 }
