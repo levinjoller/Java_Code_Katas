@@ -11,12 +11,17 @@ package main;
 
 public final class FizzBuzz {
 
+    private FizzBuzz() {
+        throw new IllegalStateException();
+    }
+
     /**
      * This methods determines if a number is a multiple of three, five or both.
      *
-     * @return String; Returns a number, Fizz, Buzz or FizzBuzz
+     * @param number number to check.
+     * @return String; Returns a number, Fizz, Buzz or FizzBuzz.
      */
-    public static String getResult(int number) {
+    public static String getResult(final int number) {
         return String.valueOf(number);
     }
 }
