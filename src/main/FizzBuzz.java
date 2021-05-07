@@ -16,7 +16,7 @@ public final class FizzBuzz {
      *
      * @return String; Returns a number, Fizz, Buzz or FizzBuzz
      */
-    public static String getResult() {
-        return "1";
+    public static String getResult(int number) {
+        return String.valueOf(number);
     }
 }

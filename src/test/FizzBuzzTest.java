@@ -14,10 +14,13 @@ import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
+    /**
+     * Return a normal number.
+     */
     @Test
-    public void getResultShouldReturn1() {
+    public void passNoMultipleOfThreeOrFiveReturnNumber() {
         String expected = "1";
-        String actual = FizzBuzz.getResult();
+        String actual = FizzBuzz.getResult(1);
         assertEquals(expected, actual);
     }
 }
