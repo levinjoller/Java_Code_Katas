@@ -14,14 +14,10 @@ import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
-    /**
-     * Number three as a multiplier.
-     */
+    /** Number three as a multiplier. */
     private static final int MULTIPLIER_THREE = 3;
 
-    /**
-     * Return a normal number.
-     */
+    /** Return a normal number. */
     @Test
     public void passNoMultipleOfThreeOrFiveReturnNumber() {
         String expected = "1";
@@ -29,9 +25,7 @@ public class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
-    /**
-     * Return Fizz for a multiple of three.
-     */
+    /** Return Fizz for a multiple of three. */
     @Test
     public void passMultipleOfThreeReturnFizz() {
         String expected = "Fizz";
