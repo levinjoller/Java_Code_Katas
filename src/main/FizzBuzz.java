@@ -36,13 +36,17 @@ public final class FizzBuzz {
     public static String getResult(final int number) {
         boolean isMultipleOfThree = (number % MULTIPLIER_THREE == 0);
         boolean isMultipleOfFive = (number % MULTIPLIER_FIVE == 0);
+        String result = String.valueOf(number);
 
         if (isMultipleOfThree) {
-            return MULTIPLE_THREE;
+            result = MULTIPLE_THREE;
         }
         if (isMultipleOfFive) {
-            return MULTIPLE_FIVE;
+            result = MULTIPLE_FIVE;
         }
-        return String.valueOf(number);
+        if (isMultipleOfThree && isMultipleOfFive) {
+            result = MULTIPLE_THREE + MULTIPLE_FIVE;
+        }
+        return result;
     }
 }

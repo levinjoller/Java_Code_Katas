@@ -45,4 +45,13 @@ public class FizzBuzzTest {
         String actual = FizzBuzz.getResult(number);
         assertEquals(expected, actual);
     }
+
+    /** Return FizzBuzz for a multiple of three and five */
+    @Test
+    public void passMultipleOfThreeAndFiveReturnFizzBuzz() {
+        final int number = 15;
+        String expected = MULTIPLE_THREE + MULTIPLE_FIVE;
+        String actual = FizzBuzz.getResult(number);
+        assertEquals(expected, actual);
+    }
 }
