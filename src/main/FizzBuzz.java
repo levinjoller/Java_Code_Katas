@@ -21,7 +21,7 @@ public final class FizzBuzz {
     private static final String MULTIPLE_THREE = "Fizz";
 
     /** Result for a multiple of five. */
-    private static final String MULTIPLE_Five = "Buzz";
+    private static final String MULTIPLE_FIVE = "Buzz";
 
     private FizzBuzz() {
         throw new IllegalStateException();
@@ -41,7 +41,7 @@ public final class FizzBuzz {
             return MULTIPLE_THREE;
         }
         if (isMultipleOfFive) {
-            return MULTIPLE_Five;
+            return MULTIPLE_FIVE;
         }
         return String.valueOf(number);
     }
