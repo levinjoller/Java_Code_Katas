@@ -1,6 +1,6 @@
 # Java_Code_Katas
 
-![CI only master](https://github.com/levinjoller/java_code_kata/actions/workflows/ci.yml/badge.svg)
+![ci master](https://github.com/levinjoller/java_code_katas/workflows/ci/badge.svg)
 
 The tasks are solved by test driven development. This project is for exercise purpose only.
 
