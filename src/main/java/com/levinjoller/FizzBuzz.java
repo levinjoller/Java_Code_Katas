@@ -6,7 +6,7 @@
  * @since 2021-05-04
  */
 
-package main;
+package com.levinjoller;
 
 public final class FizzBuzz {
 

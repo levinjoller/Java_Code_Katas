@@ -1,14 +1,13 @@
 /**
- * The FizzBuzzTest class provides unit tests for the main.FizzBuzz class
+ * The FizzBuzzTest class provides unit tests for the FizzBuzz class
  *
  * @author Levin Joller
  * @version 1.0
  * @since 2021-05-04
  */
 
-package test;
+package com.levinjoller;
 
-import main.FizzBuzz;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

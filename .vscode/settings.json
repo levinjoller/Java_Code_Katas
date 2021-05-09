@@ -4,12 +4,6 @@
         "titleBar.activeBackground": "#21481F",
         "titleBar.activeForeground": "#F8FCF8"
     },
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ],
-    "java.project.sourcePaths": [
-        "src"
-    ],
     "editor.rulers": [
         80
     ],
