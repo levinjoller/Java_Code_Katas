@@ -1,5 +1,7 @@
 # Java_Code_Katas
 
+![CI only master](https://github.com/levinjoller/java_code_kata/actions/workflows/ci.yml/badge.svg)
+
 The tasks are solved by test driven development. This project is for exercise purpose only.
 
 ## Build with
@@ -12,9 +14,10 @@ The tasks are solved by test driven development. This project is for exercise pu
 ## Usage
 
 Run unit tests:
-´´´sh
+
+```sh
 mvn test
-´´´
+```
 
 ## Author
 
