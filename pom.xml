@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.levinjoller</groupId>
-    <artifactId>Java_Code_Katas</artifactId>
+    <artifactId>java-code-kata</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Java_Code_Katas</name>
+    <name>java-code-kata</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
