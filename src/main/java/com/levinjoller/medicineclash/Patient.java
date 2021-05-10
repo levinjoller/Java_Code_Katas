@@ -21,7 +21,7 @@ public class Patient {
      * @return Collection of days on which all the medication were being taken
      * during this period.
      */
-    public Collection<Medicine> clash(Collection<Medicine> medicines, int days) {
+    public Collection<Medicine> clash(Collection<Medicine> medicines, final int days) {
         return new ArrayList<>();
     }
 }
