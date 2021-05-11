@@ -11,22 +11,24 @@ package com.levinjoller.medicineclash;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 import org.junit.jupiter.api.Test;
 
 public class MedicineClashTest {
 
-    /** Return empty list for a patient without medication. */
+    /** Return an empty list for a patient without medicines. */
     @Test
-    public void clashPatientWothoutMedicationReturnEmptyList() {
+    public void clashPatientWithoutMedicinesReturnEmptyList() {
         // Arrange
         Patient patient = new Patient();
-        List<Medicine> medicine = new ArrayList<Medicine>();
-        int days = 0;
+        Collection<String> medicineNames = new ArrayList<String>();
+        int daysBack = 0;
         // Act
-        var actual = patient.clash(medicine, days);
+        var actual = patient.clash(medicineNames, daysBack);
         // Assert
         assertTrue(actual.isEmpty());
     }
+
+    /**  */
 }

@@ -8,6 +8,7 @@
 
 package com.levinjoller.medicineclash;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -16,13 +17,12 @@ public class Patient {
     /**
      * This method determines if the patient has any medicine clashes.
      *
-     * @param medicines which are taken.
-     * @param days
-     * @return Collection of days on which all the medication were being taken
-     * during this period.
+     * @param medicineNames to be checked for a clash.
+     * @param daysBack      period of time.
+     * @return Collection of days on which all the medicines were being taken.
      */
-    public Collection<Medicine> clash(
-        final Collection<Medicine> medicines, final int days) {
+    public Collection<Date> clash(
+        final Collection<String> medicineNames, final int daysBack) {
         return new ArrayList<>();
     }
 }
