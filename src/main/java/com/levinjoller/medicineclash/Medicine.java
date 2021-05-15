@@ -22,7 +22,7 @@ public class Medicine {
     /**
      * Constructor.
      *
-     * @param name of medicine.
+     * @param medicineName of medicine.
      */
     public Medicine(final String medicineName) {
         name = medicineName;

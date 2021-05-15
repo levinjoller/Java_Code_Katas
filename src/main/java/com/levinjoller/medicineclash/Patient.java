@@ -60,7 +60,7 @@ public class Patient {
             for (Medicine medicine : medicines) {
                 if (medicine.getName().equals(name)) {
                     Collection<Prescription> pre = medicine.getPrescription();
-                    if (pre.iterator().hasNext()){
+                    if (pre.iterator().hasNext()) {
                         result.add(pre.iterator().next().getDispenseDate());
                     }
                 }
