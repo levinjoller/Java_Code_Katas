@@ -22,7 +22,6 @@ public class Patient {
 
     /**
      * Add medicine to the patient.
-     *
      * @param medicine to add.
      */
     public void addMedicine(final Medicine medicine) {
@@ -31,7 +30,6 @@ public class Patient {
 
     /**
      * Determines if the patient has any medicine clashes, default period.
-     *
      * @param medicineNames to be checked for a clash.
      * @return Collection of days on which all the medicines were being taken.
      */
@@ -41,7 +39,6 @@ public class Patient {
 
     /**
      * This method determines if the patient has any medicine clashes.
-     *
      * @param medicineNames to be checked for a clash.
      * @param daysBack      period of time.
      * @return Collection of days on which all the medicines were being taken.

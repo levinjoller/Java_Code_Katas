@@ -19,22 +19,20 @@ public class Prescription {
     private int daysSupply;
 
     /**
-     * Return the day of the dispense of this prescription.
-     *
-     * @return dispenseDate.
-     */
-    public LocalDate getDispenseDate() {
-        return dispenseDate;
-    }
-
-    /**
      * Constructor.
-     *
      * @param dispense of the medicine.
      * @param supply   number of days.
      */
     public Prescription(final LocalDate dispense, final int supply) {
         dispenseDate = dispense;
         daysSupply = supply;
+    }
+
+    /**
+     * Return the day of the dispense of this prescription.
+     * @return dispenseDate.
+     */
+    public LocalDate getDispenseDate() {
+        return dispenseDate;
     }
 }

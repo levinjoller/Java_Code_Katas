@@ -21,7 +21,6 @@ public class Medicine {
 
     /**
      * Constructor.
-     *
      * @param medicineName of medicine.
      */
     public Medicine(final String medicineName) {
@@ -30,8 +29,7 @@ public class Medicine {
 
     /**
      * Get name of this medicine.
-     *
-     * @return name
+     * @return name.
      */
     public String getName() {
         return name;
@@ -39,8 +37,7 @@ public class Medicine {
 
     /**
      * Get all prescriptions of this medicine.
-     *
-     * @return prescriptions
+     * @return prescriptions.
      */
     public Collection<Prescription> getPrescription() {
         return prescriptions;
@@ -48,7 +45,6 @@ public class Medicine {
 
     /**
      * Add a prescription to the medicine.
-     *
      * @param prescription to be added.
      */
     public void addPrescription(final Prescription prescription) {
