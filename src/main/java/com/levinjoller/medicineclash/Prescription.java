@@ -21,7 +21,7 @@ public class Prescription {
     /**
      * Return the day of the dispense of this prescription.
      *
-     * @return dispenseDate. 
+     * @return dispenseDate.
      */
     public LocalDate getDispenseDate() {
         return dispenseDate;

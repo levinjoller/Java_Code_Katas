@@ -47,9 +47,9 @@ public class Patient {
      * @return Collection of days on which all the medicines were being taken.
      */
     public Collection<LocalDate> clash(
-        final Collection<String> medicineNames, 
+        final Collection<String> medicineNames,
         final int daysBack) {
-        boolean isMedicineNamePassed = 
+        boolean isMedicineNamePassed =
             (medicineNames == null || medicineNames.isEmpty());
         Collection<LocalDate> result = new ArrayList<>();
 
@@ -59,8 +59,9 @@ public class Patient {
         for (String name : medicineNames) {
             for (Medicine medicine : medicines) {
                 if (medicine.getName().equals(name)) {
-                    for (Prescription prescription : medicine.getPrescription()) {
-                        result.add(prescription.getDispenseDate());
+                    Collection<Prescription> pre = medicine.getPrescription();
+                    if (pre.iterator().hasNext()){
+                        result.add(pre.iterator().next().getDispenseDate());
                     }
                 }
             }
