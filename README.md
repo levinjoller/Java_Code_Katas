@@ -10,6 +10,7 @@ The tasks are solved by test driven development. This project is for exercise pu
 - Apache Maven v3.8.1
 - OpenJDK v16.0.1
 - JUnit v5
+- Checkstyle v8.42
 
 ## Usage
 

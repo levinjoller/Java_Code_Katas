@@ -19,13 +19,18 @@ public class Medicine {
     /** Unique name of this medicine. */
     private final String name;
 
-    public Medicine(String name) {
-        this.name = name;
+    /**
+     * Constructor.
+     *
+     * @param name of medicine.
+     */
+    public Medicine(final String medicineName) {
+        name = medicineName;
     }
 
     /**
      * Get name of this medicine.
-     * 
+     *
      * @return name
      */
     public String getName() {
@@ -34,19 +39,19 @@ public class Medicine {
 
     /**
      * Get all prescriptions of this medicine.
-     * 
+     *
      * @return prescriptions
      */
-    public Collection<Prescription> getPrescription(){
+    public Collection<Prescription> getPrescription() {
         return prescriptions;
     }
 
     /**
      * Add a prescription to the medicine.
-     * 
+     *
      * @param prescription to be added.
      */
-    public void addPrescription(Prescription prescription) {
+    public void addPrescription(final Prescription prescription) {
         this.prescriptions.add(prescription);
     }
 }

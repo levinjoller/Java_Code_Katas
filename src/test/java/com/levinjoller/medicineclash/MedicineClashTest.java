@@ -35,13 +35,13 @@ public class MedicineClashTest {
     }
 
     /**
-     * Return dispense day of prescription when clash and dispense is today and * only one prescription is present.
+     * Return dispense day of prescription when clash and dispense is today.
      */
     @Test
     public void shouldReturnDispenseDateWhenClashAndDispenseIsToday() {
         // Arrange
         LocalDate dispenseDate = LocalDate.now();
-        int daysSupply = 10;
+        final int daysSupply = 10;
         String medicineName = "Aspirin";
 
         Prescription prescription = new Prescription(dispenseDate, daysSupply);
@@ -52,7 +52,7 @@ public class MedicineClashTest {
 
         Collection<String> medicineNames = new ArrayList<>();
         medicineNames.add(medicineName);
-        int daysBack = 3;
+        final int daysBack = 3;
         // Act
         Collection<LocalDate> actual = patient.clash(medicineNames, daysBack);
         // Assert
