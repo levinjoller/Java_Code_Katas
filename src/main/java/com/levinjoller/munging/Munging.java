@@ -40,7 +40,7 @@ public class Munging {
 
 		w.setDay(Integer.parseInt(row.substring(dayStart, dayEnd)));
 		w.setMaxTemp(Integer.parseInt(row.substring(maxStart, maxEnd)));
-		w.setDay(Integer.parseInt(row.substring(minStart, minEnd)));
+		w.setMinTemp(Integer.parseInt(row.substring(minStart, minEnd)));
 		return w;
 	}
 

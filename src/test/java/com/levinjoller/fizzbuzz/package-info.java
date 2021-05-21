@@ -1,2 +1,2 @@
-/** FizzBuzz kata */
+/** FizzBuzz kata. */
 package com.levinjoller.fizzbuzz;

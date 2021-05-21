@@ -1,2 +1,2 @@
-/** Data munging kata */
+/** Data munging kata. */
 package com.levinjoller.munging;

@@ -23,8 +23,8 @@ public class MungingTest {
 		final int min = 59;
 		List<Weather> listWeather = Munging.getWeather();
 		assertEquals(day, listWeather.get(0).getDay());
-		assertEquals(min, listWeather.get(0).getDay());
-		assertEquals(max, listWeather.get(0).getDay());
+		assertEquals(max, listWeather.get(0).getMaxTemp());
+		assertEquals(min, listWeather.get(0).getMinTemp());
 	}
 
 	/** Return second weather data entry in file. */
@@ -35,7 +35,7 @@ public class MungingTest {
 		final int min = 63;
 		List<Weather> listWeather = Munging.getWeather();
 		assertEquals(day, listWeather.get(1).getDay());
-		assertEquals(min, listWeather.get(1).getMaxTemp());
-		assertEquals(max, listWeather.get(1).getMinTemp());
+		assertEquals(max, listWeather.get(1).getMaxTemp());
+		assertEquals(min, listWeather.get(1).getMinTemp());
 	}
 }
