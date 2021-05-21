@@ -1,9 +1,10 @@
 package com.levinjoller.munging;
 
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the Munging class.
@@ -17,24 +18,24 @@ public class MungingTest {
 	/** Return first weather data entry in file. */
 	@Test
 	public void getWeatherFirstRow() {
-		int day = 1;
-		int max = 88;
-		int min = 59;
+		final int day = 1;
+		final int max = 88;
+		final int min = 59;
 		List<Weather> listWeather = Munging.getWeather();
-		assertEquals(day, listWeather.get(0).day);
-		assertEquals(min, listWeather.get(0).minTemp);
-		assertEquals(max, listWeather.get(0).maxTemp);
+		assertEquals(day, listWeather.get(0).getDay());
+		assertEquals(min, listWeather.get(0).getDay());
+		assertEquals(max, listWeather.get(0).getDay());
 	}
 
 	/** Return second weather data entry in file. */
 	@Test
 	public void getWeatherSecondRow() {
-		int day = 2;
-		int max = 79;
-		int min = 63;
+		final int day = 2;
+		final int max = 79;
+		final int min = 63;
 		List<Weather> listWeather = Munging.getWeather();
-		assertEquals(day, listWeather.get(1).day);
-		assertEquals(min, listWeather.get(1).minTemp);
-		assertEquals(max, listWeather.get(1).maxTemp);
+		assertEquals(day, listWeather.get(1).getDay());
+		assertEquals(min, listWeather.get(1).getMaxTemp());
+		assertEquals(max, listWeather.get(1).getMinTemp());
 	}
 }

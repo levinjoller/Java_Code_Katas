@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Main class for the Data-Munging kata.
- * 
+ *
  * @author Levin Joller
  * @since 2021-05-12
  * @version 1.0.0
@@ -16,32 +16,49 @@ import java.util.List;
 public class Munging {
 
 	/**
+	 * Default constructor.
+	 */
+	private Munging() {
+		throw new IllegalStateException();
+	}
+
+	/**
 	 * Convert string to Weather object.
-	 * 
+	 *
 	 * @param row
 	 * @return weather object.
 	 */
-	private static Weather toWeather(String row) {
+	private static Weather toWeather(final String row) {
+		final int dayStart = 3;
+		final int dayEnd = 4;
+		final int maxStart = 6;
+		final int maxEnd = 8;
+		final int minStart = 12;
+		final int minEnd = 14;
+
 		Weather w = new Weather();
-		w.day = Integer.parseInt(row.substring(3, 4));
-		w.maxTemp = Integer.parseInt(row.substring(6, 8));
-		w.minTemp = Integer.parseInt(row.substring(12, 14));
+
+		w.setDay(Integer.parseInt(row.substring(dayStart, dayEnd)));
+		w.setMaxTemp(Integer.parseInt(row.substring(maxStart, maxEnd)));
+		w.setDay(Integer.parseInt(row.substring(minStart, minEnd)));
 		return w;
 	}
 
 	/**
 	 * Get data out of file.
-	 * 
+	 *
 	 * @return List of Weather data
 	 */
 	public static List<Weather> getWeather() {
 		String path = "./src/main/resources/weather.dat";
 		List<Weather> result = new ArrayList<Weather>();
+		final int dayOne = 2;
+		final int dayTwo = 3;
 		try {
 			List<String> listWeather = Files.readAllLines(Paths.get(path));
-			String thirdRow = listWeather.get(2);
+			String thirdRow = listWeather.get(dayOne);
 			result.add(toWeather(thirdRow));
-			String secondRow = listWeather.get(3);
+			String secondRow = listWeather.get(dayTwo);
 			result.add(toWeather(secondRow));
 		} catch (IOException e) {
 			e.printStackTrace();
