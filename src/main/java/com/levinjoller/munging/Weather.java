@@ -9,54 +9,54 @@ package com.levinjoller.munging;
  */
 public class Weather {
 
-	/** Index of the day. */
-	private int day;
+    /** Index of the day. */
+    private int day;
 
-	/** Max. temperature. */
-	private int maxTemp;
+    /** Max. temperature. */
+    private int maxTemp;
 
-	/** Min. temperature. */
-	private int minTemp;
+    /** Min. temperature. */
+    private int minTemp;
 
-	/**
-	 * @return day
-	 */
-	public int getDay() {
-		return day;
-	}
+    /**
+     * @return day
+     */
+    public int getDay() {
+        return day;
+    }
 
-	/**
-	 * @param day
-	 */
-	public void setDay(final int day) {
-		this.day = day;
-	}
+    /**
+     * @param day
+     */
+    public void setDay(final int day) {
+        this.day = day;
+    }
 
-	/**
-	 * @return mayTemp
-	 */
-	public int getMaxTemp() {
-		return maxTemp;
-	}
+    /**
+     * @return mayTemp
+     */
+    public int getMaxTemp() {
+        return maxTemp;
+    }
 
-	/**
-	 * @param maxTemp
-	 */
-	public void setMaxTemp(final int maxTemp) {
-		this.maxTemp = maxTemp;
-	}
+    /**
+     * @param maxTemp
+     */
+    public void setMaxTemp(final int maxTemp) {
+        this.maxTemp = maxTemp;
+    }
 
-	/**
-	 * @return minTemp
-	 */
-	public int getMinTemp() {
-		return minTemp;
-	}
+    /**
+     * @return minTemp
+     */
+    public int getMinTemp() {
+        return minTemp;
+    }
 
-	/**
-	 * @param minTemp
-	 */
-	public void setMinTemp(final int minTemp) {
-		this.minTemp = minTemp;
-	}
+    /**
+     * @param minTemp
+     */
+    public void setMinTemp(final int minTemp) {
+        this.minTemp = minTemp;
+    }
 }
