@@ -26,10 +26,10 @@ public class Weather {
     }
 
     /**
-     * @param day
+     * @param dayIndex
      */
-    public void setDay(final int day) {
-        this.day = day;
+    public void setDay(final int dayIndex) {
+        day = dayIndex;
     }
 
     /**
@@ -40,10 +40,10 @@ public class Weather {
     }
 
     /**
-     * @param maxTemp
+     * @param temp
      */
-    public void setMaxTemp(final int maxTemp) {
-        this.maxTemp = maxTemp;
+    public void setMaxTemp(final int temp) {
+        maxTemp = temp;
     }
 
     /**
@@ -54,9 +54,9 @@ public class Weather {
     }
 
     /**
-     * @param minTemp
+     * @param temp
      */
-    public void setMinTemp(final int minTemp) {
-        this.minTemp = minTemp;
+    public void setMinTemp(final int temp) {
+        minTemp = temp;
     }
 }
