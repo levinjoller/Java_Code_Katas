@@ -36,11 +36,14 @@ public final class Munging {
         final int minStart = 12;
         final int minEnd = 14;
 
-        Weather w = new Weather();
+        int day = Integer.parseInt(row.substring(dayStart, dayEnd));
+        int max = Integer.parseInt(row.substring(maxStart, maxEnd));
+        int min = Integer.parseInt(row.substring(minStart, minEnd));
 
-        w.setDay(Integer.parseInt(row.substring(dayStart, dayEnd)));
-        w.setMaxTemp(Integer.parseInt(row.substring(maxStart, maxEnd)));
-        w.setMinTemp(Integer.parseInt(row.substring(minStart, minEnd)));
+        Weather w = new Weather();
+        w.setDay(day);
+        w.setMaxTemp(max);
+        w.setMinTemp(min);
         return w;
     }
 
@@ -52,17 +55,18 @@ public final class Munging {
     public static List<Weather> getWeather() {
         String path = "./src/main/resources/weather.dat";
         List<Weather> result = new ArrayList<Weather>();
-        final int dayOne = 2;
-        final int dayTwo = 3;
+        final int firstRow = 2;
+
         try {
             List<String> listWeather = Files.readAllLines(Paths.get(path));
-            String thirdRow = listWeather.get(dayOne);
-            result.add(toWeather(thirdRow));
-            String secondRow = listWeather.get(dayTwo);
-            result.add(toWeather(secondRow));
+            for (int i = 0; i < 2; i++) {
+                String row = listWeather.get(i + firstRow);
+                result.add(toWeather(row));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return result;
     }
 }
