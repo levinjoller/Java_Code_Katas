@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Main class for the Data-Munging kata.
@@ -29,20 +31,11 @@ public final class Munging {
      * @return weather object.
      */
     private static Weather toWeather(final String row) {
-        final int dayStart = 3;
-        final int dayEnd = 4;
-        final int maxStart = 6;
-        final int maxEnd = 8;
-        final int minStart = 12;
-        final int minEnd = 14;
+        List<String> data = Stream.of(row.split("[^\\d\\.]")).filter(w -> !w.isEmpty()).collect(Collectors.toList());
 
-        String daySub = row.substring(dayStart, dayEnd);
-        String maxSub = row.substring(maxStart, maxEnd);
-        String minSub = row.substring(minStart, minEnd);
-
-        int day = Integer.parseInt(daySub);
-        int max = Integer.parseInt(maxSub);
-        int min = Integer.parseInt(minSub);
+        int day = Integer.parseInt(data.get(0));
+        int max = Integer.parseInt(data.get(1));
+        int min = Integer.parseInt(data.get(2));
 
         Weather w = new Weather();
         w.setDay(day);
@@ -58,13 +51,13 @@ public final class Munging {
      */
     public static List<Weather> getWeather() {
         String path = "./src/main/resources/weather.dat";
-        List<Weather> result = new ArrayList<Weather>();
+        List<Weather> result = new ArrayList<>();
         final int firstRow = 2;
 
         try {
-            List<String> Weathers = Files.readAllLines(Paths.get(path));
-            for (int i = 0; i < 2; i++) {
-                String row = Weathers.get(i + firstRow);
+            List<String> weathers = Files.readAllLines(Paths.get(path));
+            for (int i = 0; i < 10; i++) {
+                String row = weathers.get(i + firstRow);
                 result.add(toWeather(row));
             }
         } catch (IOException e) {
