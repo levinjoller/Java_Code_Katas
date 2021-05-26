@@ -31,7 +31,8 @@ public final class Munging {
      * @return weather object.
      */
     private static Weather toWeather(final String row) {
-        List<String> data = Stream.of(row.split("[^\\d\\.]")).filter(w -> !w.isEmpty()).collect(Collectors.toList());
+        List<String> data = Stream.of(row.split("[^\\d\\.]"))
+                .filter(w -> !w.isEmpty()).collect(Collectors.toList());
 
         int day = Integer.parseInt(data.get(0));
         int max = Integer.parseInt(data.get(1));
@@ -53,10 +54,11 @@ public final class Munging {
         String path = "./src/main/resources/weather.dat";
         List<Weather> result = new ArrayList<>();
         final int firstRow = 2;
+        final int lastRow = 10;
 
         try {
             List<String> weathers = Files.readAllLines(Paths.get(path));
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < lastRow; i++) {
                 String row = weathers.get(i + firstRow);
                 result.add(toWeather(row));
             }

@@ -39,6 +39,7 @@ public class MungingTest {
         assertEquals(min, weathers.get(1).getMinTemp());
     }
 
+    /** Return tenth weather data entry in file. */
     @Test
     public void getWeatherTenthRow() {
         final int day = 10;
