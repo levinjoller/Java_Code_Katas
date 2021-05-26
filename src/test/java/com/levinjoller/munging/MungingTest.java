@@ -21,10 +21,11 @@ public class MungingTest {
         final int day = 1;
         final int max = 88;
         final int min = 59;
+        final int row = 0;
         List<Weather> weathers = Munging.getWeather();
-        assertEquals(day, weathers.get(0).getDay());
-        assertEquals(max, weathers.get(0).getMaxTemp());
-        assertEquals(min, weathers.get(0).getMinTemp());
+        assertEquals(day, weathers.get(row).getDay());
+        assertEquals(max, weathers.get(row).getMaxTemp());
+        assertEquals(min, weathers.get(row).getMinTemp());
     }
 
     /** Return second weather data entry in file. */
@@ -33,10 +34,11 @@ public class MungingTest {
         final int day = 2;
         final int max = 79;
         final int min = 63;
+        final int row = 1;
         List<Weather> weathers = Munging.getWeather();
-        assertEquals(day, weathers.get(1).getDay());
-        assertEquals(max, weathers.get(1).getMaxTemp());
-        assertEquals(min, weathers.get(1).getMinTemp());
+        assertEquals(day, weathers.get(row).getDay());
+        assertEquals(max, weathers.get(row).getMaxTemp());
+        assertEquals(min, weathers.get(row).getMinTemp());
     }
 
     /** Return tenth weather data entry in file. */
@@ -45,9 +47,10 @@ public class MungingTest {
         final int day = 10;
         final int max = 84;
         final int min = 64;
+        final int row = 9;
         List<Weather> weathers = Munging.getWeather();
-        assertEquals(day, weathers.get(9).getDay());
-        assertEquals(max, weathers.get(9).getMaxTemp());
-        assertEquals(min, weathers.get(9).getMinTemp());
+        assertEquals(day, weathers.get(row).getDay());
+        assertEquals(max, weathers.get(row).getMaxTemp());
+        assertEquals(min, weathers.get(row).getMinTemp());
     }
 }
