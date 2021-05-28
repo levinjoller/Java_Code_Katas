@@ -10,53 +10,53 @@ package com.levinjoller.munging;
 public class Weather {
 
     /** Index of the day. */
-    private int day;
+    private String day;
 
     /** Max. temperature. */
-    private int maxTemp;
+    private double maxTemp;
 
     /** Min. temperature. */
-    private int minTemp;
+    private double minTemp;
 
     /**
      * @return day
      */
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
     /**
      * @param dayIndex
      */
-    public void setDay(final int dayIndex) {
+    public void setDay(final String dayIndex) {
         day = dayIndex;
     }
 
     /**
      * @return mayTemp
      */
-    public int getMaxTemp() {
+    public double getMaxTemp() {
         return maxTemp;
     }
 
     /**
      * @param temp
      */
-    public void setMaxTemp(final int temp) {
+    public void setMaxTemp(final double temp) {
         maxTemp = temp;
     }
 
     /**
      * @return minTemp
      */
-    public int getMinTemp() {
+    public double getMinTemp() {
         return minTemp;
     }
 
     /**
      * @param temp
      */
-    public void setMinTemp(final int temp) {
+    public void setMinTemp(final double temp) {
         minTemp = temp;
     }
 }

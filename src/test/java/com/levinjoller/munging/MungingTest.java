@@ -18,7 +18,7 @@ public class MungingTest {
     /** Return first weather data entry in file. */
     @Test
     public void getWeatherFirstRow() {
-        final int day = 1;
+        final String day = "1";
         final int max = 88;
         final int min = 59;
         final int row = 0;
@@ -31,7 +31,7 @@ public class MungingTest {
     /** Return second weather data entry in file. */
     @Test
     public void getWeatherSecondRow() {
-        final int day = 2;
+        final String day = "2";
         final int max = 79;
         final int min = 63;
         final int row = 1;
@@ -44,10 +44,23 @@ public class MungingTest {
     /** Return tenth weather data entry in file. */
     @Test
     public void getWeatherTenthRow() {
-        final int day = 10;
+        final String day = "10";
         final int max = 84;
         final int min = 64;
         final int row = 9;
+        List<Weather> weathers = Munging.getWeather();
+        assertEquals(day, weathers.get(row).getDay());
+        assertEquals(max, weathers.get(row).getMaxTemp());
+        assertEquals(min, weathers.get(row).getMinTemp());
+    }
+
+    /** Return last weather data entry in file with alphabetic day. */
+    @Test
+    public void getWeatherLastRowWithAlphabiticalDay() {
+        final String day = "mo";
+        final double max = 82.9;
+        final double min = 60.5;
+        final int row = 30;
         List<Weather> weathers = Munging.getWeather();
         assertEquals(day, weathers.get(row).getDay());
         assertEquals(max, weathers.get(row).getMaxTemp());
