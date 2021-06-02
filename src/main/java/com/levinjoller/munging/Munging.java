@@ -32,7 +32,7 @@ public final class Munging {
      */
     private static Weather toWeather(final String row) {
         String exclude = "[\\s\\*]";
-        int dayMaxMin = 3;
+        final int dayMaxMin = 3;
         Stream<String> columns = Stream.of(row.split(exclude));
         Stream<String> digits = columns.filter(w -> !w.isEmpty())
                 .limit(dayMaxMin);
