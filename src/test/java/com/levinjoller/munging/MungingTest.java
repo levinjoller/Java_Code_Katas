@@ -86,7 +86,9 @@ public class MungingTest {
         final double min = 32;
         final double spread = max - min;
         List<Weather> weathers = Munging.getWeather();
-        assertEquals(day, Munging.getLagestSpread(weathers).getDay());
-        assertEquals(spread, Munging.getLagestSpread(weathers).getTempSpread());
+        Weather actual = Munging.getLargestSpread(weathers);
+
+        assertEquals(day, actual.getDay());
+        assertEquals(spread, actual.getTempSpread());
     }
 }

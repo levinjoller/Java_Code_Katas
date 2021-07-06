@@ -77,7 +77,7 @@ public final class Munging {
      * @param weathers
      * @return largest temperature spread
      */
-    public static Weather getLagestSpread(List<Weather> weathers) {
+    public static Weather getLargestSpread(List<Weather> weathers) {
         Weather result = weathers.get(0);
 
         for (Weather weather : weathers) {
