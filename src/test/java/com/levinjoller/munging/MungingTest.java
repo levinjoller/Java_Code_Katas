@@ -67,7 +67,7 @@ public class MungingTest {
         assertEquals(min, weathers.get(row).getMinTemp());
     }
 
-    /** Return temperature spread of first day */
+    /** Return temperature spread of first day. */
     @Test
     public void getTemperatureSpreadOfFirstDay() {
         final double max = 88;
