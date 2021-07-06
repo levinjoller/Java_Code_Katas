@@ -59,4 +59,11 @@ public class Weather {
     public void setMinTemp(final double temp) {
         minTemp = temp;
     }
+
+    /**
+     * @return temperature difference
+     */
+    public double getTempSpread() {
+        return maxTemp - minTemp;
+    }
 }
