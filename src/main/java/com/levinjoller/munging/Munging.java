@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -77,15 +78,19 @@ public final class Munging {
      * @param weathers
      * @return largest temperature spread
      */
-    public static Weather getLargestSpread(List<Weather> weathers) {
-        Weather result = weathers.get(0);
+    public static Weather getLargestSpread(final List<Weather> weathers) {
+        return weathers.stream()
+                .max(Comparator.comparingDouble(x -> x.getTempSpread())).get();
+    }
 
-        for (Weather weather : weathers) {
-            if (weather.getTempSpread() > result.getTempSpread()) {
-                result = weather;
-            }
-        }
-
-        return result;
+    /**
+     * Get weather with smallest temperature spread.
+     * 
+     * @param weathers
+     * @return smallest temperature spread
+     */
+    public static Weather getSmallestSpread(final List<Weather> weathers) {
+        return weathers.stream()
+                .min(Comparator.comparingDouble(x -> x.getTempSpread())).get();
     }
 }

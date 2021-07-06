@@ -91,4 +91,17 @@ public class MungingTest {
         assertEquals(day, actual.getDay());
         assertEquals(spread, actual.getTempSpread());
     }
+
+    @Test
+    public void getSmallestTemperatureSpread() {
+        final String day = "14";
+        final double max = 61;
+        final double min = 59;
+        final double spread = max - min;
+        List<Weather> weather = Munging.getWeather();
+        Weather actual = Munging.getSmallestSpread(weather);
+
+        assertEquals(day, actual.getDay());
+        assertEquals(spread, actual.getTempSpread());
+    }
 }
