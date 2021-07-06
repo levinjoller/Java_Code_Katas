@@ -77,4 +77,16 @@ public class MungingTest {
         List<Weather> weathers = Munging.getWeather();
         assertEquals(spread, weathers.get(row).getTempSpread());
     }
+
+    /** Return the largest temperature spread in the list. */
+    @Test
+    public void getLargestTeparatureSpread() {
+        final String day = "9";
+        final double max = 86;
+        final double min = 32;
+        final double spread = max - min;
+        List<Weather> weathers = Munging.getWeather();
+        assertEquals(day, Munging.getLagestSpread(weathers).getDay());
+        assertEquals(spread, Munging.getLagestSpread(weathers).getTempSpread());
+    }
 }

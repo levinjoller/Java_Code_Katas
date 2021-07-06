@@ -12,8 +12,8 @@ import java.util.stream.Stream;
  * Main class for the Data-Munging kata.
  *
  * @author Levin Joller
- * @since 2021-05-12
  * @version 1.0.0
+ * @since 2021-05-12
  */
 public final class Munging {
 
@@ -52,7 +52,7 @@ public final class Munging {
     /**
      * Get data out of file.
      *
-     * @return List of Weather data
+     * @return list of Weather data
      */
     public static List<Weather> getWeather() {
         String path = "./src/main/resources/weather.dat";
@@ -66,6 +66,24 @@ public final class Munging {
             weathers.forEach(w -> result.add(toWeather(w)));
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    /**
+     * Get weather with largest temperature spread.
+     * 
+     * @param weathers
+     * @return largest temperature spread
+     */
+    public static Weather getLagestSpread(List<Weather> weathers) {
+        Weather result = weathers.get(0);
+
+        for (Weather weather : weathers) {
+            if (weather.getTempSpread() > result.getTempSpread()) {
+                result = weather;
+            }
         }
 
         return result;
