@@ -57,11 +57,12 @@ public final class Munging {
     public static List<Weather> getWeather() {
         String path = "./src/main/resources/weather.dat";
         List<Weather> result = new ArrayList<>();
+        final int startIndex = 2;
 
         try {
             List<String> weathers = Files.readAllLines(Paths.get(path));
             // Remove header
-            weathers = weathers.subList(2, weathers.size());
+            weathers = weathers.subList(startIndex, weathers.size());
             weathers.forEach(w -> result.add(toWeather(w)));
         } catch (IOException e) {
             e.printStackTrace();
