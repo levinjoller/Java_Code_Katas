@@ -92,6 +92,7 @@ public class MungingTest {
         assertEquals(spread, actual.getTempSpread());
     }
 
+    /** Return the smallest temperature spread in the list. */
     @Test
     public void getSmallestTemperatureSpread() {
         final String day = "14";

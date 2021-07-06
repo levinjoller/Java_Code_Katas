@@ -74,7 +74,7 @@ public final class Munging {
 
     /**
      * Get weather with largest temperature spread.
-     * 
+     *
      * @param weathers
      * @return largest temperature spread
      */
@@ -85,7 +85,7 @@ public final class Munging {
 
     /**
      * Get weather with smallest temperature spread.
-     * 
+     *
      * @param weathers
      * @return smallest temperature spread
      */
