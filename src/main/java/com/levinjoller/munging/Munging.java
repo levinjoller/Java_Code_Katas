@@ -73,17 +73,6 @@ public final class Munging {
     }
 
     /**
-     * Get weather with largest temperature spread.
-     *
-     * @param weathers
-     * @return largest temperature spread
-     */
-    public static Weather getLargestSpread(final List<Weather> weathers) {
-        return weathers.stream()
-                .max(Comparator.comparingDouble(x -> x.getTempSpread())).get();
-    }
-
-    /**
      * Get weather with smallest temperature spread.
      *
      * @param weathers

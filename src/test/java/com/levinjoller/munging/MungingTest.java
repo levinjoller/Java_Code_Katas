@@ -78,20 +78,6 @@ public class MungingTest {
         assertEquals(spread, weathers.get(row).getTempSpread());
     }
 
-    /** Return the largest temperature spread in the list. */
-    @Test
-    public void getLargestTeparatureSpread() {
-        final String day = "9";
-        final double max = 86;
-        final double min = 32;
-        final double spread = max - min;
-        List<Weather> weathers = Munging.getWeather();
-        Weather actual = Munging.getLargestSpread(weathers);
-
-        assertEquals(day, actual.getDay());
-        assertEquals(spread, actual.getTempSpread());
-    }
-
     /** Return the smallest temperature spread in the list. */
     @Test
     public void getSmallestTemperatureSpread() {
@@ -99,8 +85,8 @@ public class MungingTest {
         final double max = 61;
         final double min = 59;
         final double spread = max - min;
-        List<Weather> weather = Munging.getWeather();
-        Weather actual = Munging.getSmallestSpread(weather);
+        List<Weather> weathers = Munging.getWeather();
+        Weather actual = Munging.getSmallestSpread(weathers);
 
         assertEquals(day, actual.getDay());
         assertEquals(spread, actual.getTempSpread());
