@@ -12,11 +12,18 @@ import java.util.List;
 public class Main {
 
     /**
+     * Default constructor.
+     */
+    private Main() {
+        throw new IllegalStateException();
+    }
+
+    /**
      * Output the day information in the console as a table.
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         List<Weather> weathers = Munging.getWeather();
         Weather smallest = Munging.getSmallestSpread(weathers);
 
