@@ -33,7 +33,7 @@ public class Weather {
     }
 
     /**
-     * @return mayTemp
+     * @return maxTemp
      */
     public double getMaxTemp() {
         return maxTemp;
