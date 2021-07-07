@@ -9,7 +9,7 @@ import java.util.List;
  * @version 1.0.0
  * @since 2021-07-07
  */
-public class Main {
+public final class Main {
 
     /**
      * Default constructor.
